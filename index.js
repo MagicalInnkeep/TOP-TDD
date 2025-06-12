@@ -10,12 +10,11 @@ export function capitalize(string){
 }
 
 export function reverseString(string){
-    let str;
-    if(string.length==0){
-        str ="";
-    }
+    let str ="";
+    if(string.length==0){}
     else{
-        str = "rotator"
+        str = string.split('')
+                    .reduce((str,x) => x+str )
     }
     return str;
 }
