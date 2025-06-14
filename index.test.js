@@ -91,9 +91,13 @@ it('caesarCipher happy test', () =>
 .toBe('HAPPY'));
 
 it('caesarCipher another happy test', () =>
-    expect(caesarCipher('happy',27))
+    expect(caesarCipher('happy',26))
 .toBe('HAPPY'));
 
 it('caesarCipher regular test', () =>
     expect(caesarCipher('happy',3))
 .toBe('KDSSB'));
+
+it('caesarCipher non chars', () =>
+    expect(caesarCipher('happy!',3))
+.toBe('KDSSB!'));

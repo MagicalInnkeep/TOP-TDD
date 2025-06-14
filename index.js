@@ -35,7 +35,17 @@ export function caesarCipher(string, key){
 
     let str =string.toUpperCase()
                     .split('')
-                    .reduce((str,x) => str+alphabet[alphabet.indexOf(x)+key])
+                    .map(x => {
+                        if(alphabet.includes(x)){
+                        let shiftedIndex=alphabet.indexOf(x)+key;
+                        shiftedIndex = shiftedIndex>25?shiftedIndex-26:shiftedIndex;
+                        return alphabet[shiftedIndex];
+                        }
+                        else{
+                            return x;
+                        }
+                    })
+                    .join("")
 
     return str
 }
