@@ -1,4 +1,4 @@
-import {capitalize, reverseString, calculator} from './index.js'
+import {capitalize, reverseString, calculator, caesarCipher} from './index.js'
 
 //capitalize tests
 
@@ -84,3 +84,16 @@ it('calculator: divide doubles', () =>
     expect(calculator.divide(10.4,5.32))
 .toBeCloseTo(1.954887,5));
 
+//caesarCipher
+
+it('caesarCipher happy test', () =>
+    expect(caesarCipher('happy',0))
+.toBe('HAPPY'));
+
+it('caesarCipher another happy test', () =>
+    expect(caesarCipher('happy',27))
+.toBe('HAPPY'));
+
+it('caesarCipher regular test', () =>
+    expect(caesarCipher('happy',3))
+.toBe('KDSSB'));
