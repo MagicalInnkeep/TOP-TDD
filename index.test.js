@@ -1,4 +1,4 @@
-import {capitalize, reverseString} from './index.js'
+import {capitalize, reverseString, calculator} from './index.js'
 
 //capitalize tests
 
@@ -30,3 +30,57 @@ it('reverseString: no string', () =>
 it('reverseString: real test', () =>
     expect(reverseString("elevator"))
 .toBe("rotavele"));
+
+//calculator
+it('calculator: add ints', () =>
+    expect(calculator.add(10,0))
+.toBe(10));
+
+it('calculator: add ints', () =>
+    expect(calculator.add(10,5))
+.toBe(15));
+
+it('calculator: add doubles', () =>
+    expect(calculator.add(10.4,5.32))
+.toBe(15.72));
+
+it('calculator: substract int', () =>
+    expect(calculator.substract(10,0))
+.toBe(10));
+
+it('calculator: substract int', () =>
+    expect(calculator.substract(10,5))
+.toBe(5));
+
+it('calculator: substract doubles', () =>
+    expect(calculator.substract(10.4,5.32))
+.toBe(5.08));
+
+it('calculator: substract to negative', () =>
+    expect(calculator.substract(5,10))
+.toBe(-5));
+
+it('calculator: multiply int', () =>
+    expect(calculator.multiply(10,0))
+.toBe(0));
+
+it('calculator: multiply int', () =>
+    expect(calculator.multiply(10,5))
+.toBe(50));
+
+it('calculator: multiply doubles', () =>
+    expect(calculator.multiply(10.4,5.32))
+.toBe(55.328));
+
+it('calculator: divide int', () =>
+    expect(calculator.divide(10,0))
+.toBe("DivBy0"));
+
+it('calculator: divide int', () =>
+    expect(calculator.divide(10,5))
+.toBe(2));
+
+it('calculator: divide doubles', () =>
+    expect(calculator.divide(10.4,5.32))
+.toBeCloseTo(1.954887,5));
+

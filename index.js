@@ -18,3 +18,10 @@ export function reverseString(string){
     }
     return str;
 }
+
+export const calculator = {
+    add (a,b) { return a+b},
+    substract (a,b) { return a-b},
+    multiply (a,b) { return a*b},
+    divide (a,b) { if (b==0){ return "DivBy0"} else return a/b }
+}
