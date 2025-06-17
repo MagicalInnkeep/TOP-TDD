@@ -1,4 +1,4 @@
-import {capitalize, reverseString, calculator, caesarCipher} from './index.js'
+import {capitalize, reverseString, calculator, caesarCipher, analyzeArray} from './index.js'
 
 //capitalize tests
 
@@ -101,3 +101,10 @@ it('caesarCipher regular test', () =>
 it('caesarCipher non chars', () =>
     expect(caesarCipher('happy!',3))
 .toBe('KDSSB!'));
+
+//AnalyzeArray
+
+it('analyze Array', () => 
+    expect(analyzeArray([1,8,3,4,2,6])).toEqual({average: 4,   min: 1,    max: 8,    length: 6}));
+it('analyze Array', () => 
+    expect(analyzeArray([10,3,4,7,2,6,9])).toEqual({average: 5.857142857142857,   min: 2,    max: 10,    length: 7}));

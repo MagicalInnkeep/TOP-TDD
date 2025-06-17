@@ -50,5 +50,14 @@ export function caesarCipher(string, key){
     return str
 }
 
+export function analyzeArray(array) {
+    return {
+        average: array.reduce((total, current) => total + current) / array.length,
+        min: array.reduce((current, next) => current < next ? current : next),
+        max: array.reduce((current, next) => current > next ? current : next),
+        length: array.length
+    }
+};
+
 
 
